@@ -1,0 +1,30 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+struct pollution {
+	char name[20];
+	int id;
+	double reading[5];
+	double total = 0.0;
+
+};
+int main()
+{
+	double total = 0.0;
+	struct pollution data;
+	cout << "Please enter name : ";
+	cin >> data.name;
+	cout << endl << "Please enter area id :";
+	cin >> data.id;
+	cout << "Please enter five pollution readings : ";
+
+	for (int i = 0; i < 5; i++)
+	{
+		cin >> data.reading[i];
+		total = total + data.reading[i];
+	}
+
+	cout << "The total of 5 pollution readings are : " << total << endl;
+}
+
